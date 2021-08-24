@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CommerceApi</name>
+    </assembly>
+    <members>
+        <member name="M:Produtos.Controllers.ProdutosController.GetProdutos">
+            <summary>
+            Lista os produtos
+            </summary>
+            <response code="200">Returna os produtos cadastrados</response>
+        </member>
+        <member name="M:Produtos.Controllers.ProdutosController.GetProduto(System.Int32)">
+            <summary>
+            Busca um produto pelo Id
+            </summary>
+            <returns>itens criados</returns>
+            <response code="200">Returna os itens cadastrados</response>
+        </member>
+        <member name="M:Produtos.Controllers.ProdutosController.PutProduto(System.Int32,CommerceApi.Data.Produto)">
+            <summary>
+            Edita um produto
+            </summary>
+            <returns>produtos criados</returns>
+            <response code="200">produtos foram alterados</response>
+        </member>
+        <member name="M:Produtos.Controllers.ProdutosController.PostProduto(CommerceApi.Data.Produto)">
+             <summary>
+             Cria um novo produto
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST /Produtos
+                 {
+                    "id": 1,
+                    "name": "estojo",
+                    "preco": 10.00
+                    "ativo": true,
+                    "estoque": 99
+                  }
+             </remarks>
+             <response code="201">Um novo produto foi criado</response>
+        </member>
+        <member name="M:Produtos.Controllers.ProdutosController.DeleteProduto(System.Int32)">
+            <summary>
+            Deleta um produto
+            </summary>
+            <response code="204">Produto deletado</response>
+            <response code="404">Produto não encontrado</response>
+        </member>
+        <member name="M:Usuarios.Controllers.UsuariosController.Authenticate(CommerceApi.Models.UserLoginModel)">
+             <summary>
+             Faz o login do usuário
+             </summary>
+            
+             <remarks>
+             Exemplo:
+            
+                 POST /Produtos
+                 {
+                    "email": "email@email.com"
+                    "senha": "123456123"
+                 }
+            
+             </remarks>
+            
+             <response code="200">Login efetuado com sucesso</response>
+             <response code="404">Usuário não encontrado</response>
+        </member>
+        <member name="M:Usuarios.Controllers.UsuariosController.Get(System.Int32)">
+            <summary>
+            Busca um usuário pelo Id
+            </summary>
+            <response code="200">Usuário encontrado</response>
+            <response code="400">falha ao encontrar usuário</response>
+        </member>
+        <member name="M:Usuarios.Controllers.UsuariosController.Post(CommerceApi.Data.User)">
+             <summary>
+             Cria um novo usuário
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST / Usuários
+                 {
+                    "id": 1,
+                    "name": "nome",
+                    "email": email@email.com,
+                    "senha": "123456123"
+                 }
+            
+             </remarks>
+             <returns>Um novo item criado</returns>
+             <response code="200">novo usuário criado</response>
+        </member>
+        <member name="M:Usuarios.Controllers.UsuariosController.GetUsuarios">
+            <summary>
+            Lista os usuários
+            </summary>
+            <response code="200">usuários foram listados</response>
+            <response code="400">falha ao listar usuário</response>
+        </member>
+        <member name="M:Usuarios.Controllers.UsuariosController.Put(System.Int32,CommerceApi.Data.User)">
+            <summary>
+            Edita um usuário
+            </summary>
+            <response code="200">Usuários foram alterados</response>
+            <response code="404">Usuário não encontrado</response>
+            <response code="400">Id é diferente do usuário recebido por body</response>
+        </member>
+        <member name="M:Usuarios.Controllers.UsuariosController.Delete(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <response code="204">Usuário deletado</response>
+            <response code="404">Usuário não encontrado</response>
+        </member>
+    </members>
+</doc>
